@@ -19,7 +19,7 @@ public class HelloController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String hello(Model model) {
 		//jsp側に送られるもの　　　modelという箱のmessageのなかに　Hello,Spring!という文字列を格納
-		model.addAttribute("message", "Hello,Spring!" );
+		model.addAttribute("message", "<script>alert()</script>" );
 		//hello.jspへ遷移
 		return "hello";
 	}
